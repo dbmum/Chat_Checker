@@ -4,4 +4,14 @@ This project aims to develop a machine learning model for classifying text as ei
 
 This program is for my senior project in my undergrad program. You can check on the most recent updates here.
 
-The current version of this code is running out of memory, so I am saving it to try it on another machine. I am just trying to get something working for now
+I have streamlit code that works, I am having trouble getting my trained model file in the repository due to size.
+
+## Planned Development Schedule - On schedule
+
+* Make a base model with sample data (week 1-2)
+* **Put this model in a simple application (week 3-4)**
+* Utilize web scraping to gather diverse human-made data (week 5-6)
+* Generate comparable data from ChatGPT (week 7-8)
+* Optimize model using the complete data and other optimization techniques (week 9-10)
+* Construct a better app interface for usability (week 11-12)
+* Create a comprehensive report of my findings (week 13-14)
