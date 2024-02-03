@@ -55,7 +55,7 @@ def main():
 
     user_input = st.text_area("Input Text", "")
     
-    model_path = "../BERT_model/trained_models/bert_binary_classifier.pth"
+    model_path = "BERT_model/trained_models/bert_binary_classifier.pth"
     loaded_model = TransformerBinaryClassifier()
     loaded_model.load_state_dict(torch.load(model_path))
     loaded_model.eval()
