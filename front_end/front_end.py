@@ -49,13 +49,16 @@ def plot_probabilities(probabilities):
     return fig, ax
 
 def download_model_from_drive(drive_link, destination):
-    # Check if the file already exists
-    if not os.path.exists(destination):
-        # File doesn't exist, proceed with the download
+    try:# Check if the file already exists
+        if not os.path.exists(destination):
+            # File doesn't exist, proceed with the download
+            gdown.download(drive_link, destination, quiet=False)
+        else:
+            # File already exists, skip the download
+            print(f"File '{destination}' already exists. Skipping download.")
+    except:
+        print("Error in the file download step - attempting download again")
         gdown.download(drive_link, destination, quiet=False)
-    else:
-        # File already exists, skip the download
-        print(f"File '{destination}' already exists. Skipping download.")
 
 def main():
     st.title("Chat Checker with BERT")
