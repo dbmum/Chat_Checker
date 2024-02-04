@@ -1,1 +1,3 @@
-There is currently no front end work done, though I am planning to use something like streamlit to interact with my application.
+I have streamlit code that works locally, I am having trouble getting my trained model file either in the repository or usable by the deployed streamlit app due to size. I can get one to work or the other, but I am consistently running out of free resources. I will continue my work as planned on the project and look to look into the app deployment in weeks 11-12. Otherwise I will rely on the local host and perhaps a Docker container.
+
+Otherwise I have some good functionality that I think will be useful for users.

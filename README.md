@@ -4,7 +4,8 @@ This project aims to develop a machine learning model for classifying text as ei
 
 This program is for my senior project in my undergrad program. You can check on the most recent updates here.
 
-I have streamlit code that works, I am having trouble getting my trained model file in the repository due to size.
+### Week 4 Update:
+I have streamlit code that works locally, I am having trouble getting my trained model file either in the repository or usable by the deployed streamlit app due to size. I can get one to work or the other, but I am consistently running out of free resources. I will continue my work as planned on the project and plan to look into the app deployment in weeks 11-12. Otherwise I will rely on the local host and perhaps a Docker container.
 
 ## Planned Development Schedule - On schedule
 
