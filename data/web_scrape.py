@@ -94,4 +94,4 @@ def scrape_articles_from_url(urls: set, existing_urls: set, url: str, primary: b
         print(f"\nFailed to retrieve {url}. \nStatus code: {response.status_code}\n")
 
 if __name__ == "__main__":
-    main()
+    main(False)

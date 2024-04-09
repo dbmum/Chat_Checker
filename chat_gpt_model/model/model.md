@@ -1,1 +1,0 @@
-I am currently working on adapting the open source code from ChatGPT 2.0 to be a binary classifier to give me a starting point. You can find that open source project [here](https://github.com/openai/gpt-2).

@@ -24,10 +24,10 @@ def scrape_article(url):
             article_text = ""
             for p in paragraphs:
                 # Extracting text from paragraph excluding links and nested tags
-                paragraph_text = ''.join([str(child) if isinstance(child, str) else child.text for child in p.children if not isinstance(child, Comment) and (not isinstance(child, Tag) or child.name != 'a')])
+                paragraph_text = ''.join([child.strip() if isinstance(child, str) else ' ' + child.text.strip() for child in p.contents if not isinstance(child, Comment)])
                 article_text += paragraph_text.strip() + " "
-            # Getting the first 500 words of the article
-            article_text = ' '.join(article_text.split()[:500])
+            # Getting the first 200 words of the article
+            article_text = ' '.join(article_text.split()[:200])
             return article_title, article_text
         else:
             print(f"Failed to fetch URL: {url}, Status code: {response.status_code}")
@@ -48,10 +48,10 @@ def main():
             print(f"Scraping article from URL: {url}")
             article_title, article_text = scrape_article(url)
             if article_title and article_text:
-                articles_data.append([article_title, article_text])
+                articles_data.append([article_title, article_text, url])
 
     # Convert data to DataFrame
-    df = pd.DataFrame(articles_data, columns=["Title", "Content"])
+    df = pd.DataFrame(articles_data, columns=["Title", "Content", "URL"])
 
     # Save DataFrame to Parquet file
     df.to_parquet(output_parquet)
